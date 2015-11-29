@@ -3,75 +3,7 @@
           <div class="centered">
             <div class="row row-slider">
               <div class="col col-16">
-                <div id="home-slider-outer">
-                  <div id="home-slider-title">
-                    <div id="home-slider" class="sp-vertical" style="display: block; width: 100%; max-width: 362px; padding-right: 237px;">
-                      <div class="sp-slides-container">
-                        <div class="sp-mask sp-grab" style="width: 362px; height: 280px;">
-                          <div class="sp-slides" style="transform: translate3d(0px, -580px, 0px); transition: transform 0.7s;">
-                            <div class="sp-slide" data-index="0" data-init="true" data-loaded="true" style="width: 362px; height: 280px; top: 0px;">
-                              <div class="sp-image-container" style="width: 362px; height: 280px;">
-                                <a href="http://operelome.ru/preparatyi/702-preparatyi-kaltsiya-pri-perelomah" title="Препараты кальция при переломах">
-                                  <img class="sp-image" src="<?php echo get_template_directory_uri(); ?>/img/moloko-dlya-zubov-i-kostey-m8yvewn5uik3zayrr6nnh9dj4mqx777xop9nztp8xc.jpg" data-default="http://operelome.ru/wp-content/uploads/thumbs/moloko-dlya-zubov-i-kostey-m8yvewn5uik3zayrr6nnh9dj4mqx777xop9nztp8xc.jpg" style="width: auto; height: 100%; margin-left: -34px; margin-top: 0px;">
-                                  <div class="sp-caption" style="display: none;">Препараты кальция при переломах</div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="sp-slide" data-index="1" data-init="true" data-loaded="true" style="width: 362px; height: 280px; top: 290px;">
-                              <div class="sp-image-container" style="width: 362px; height: 280px;">
-                                <a href="http://operelome.ru/preparatyi/684-preparatyi-dlya-srashhivaniya-kostey" title="Препараты для сращивания костей">
-                                  <img class="sp-image" src="<?php echo get_template_directory_uri(); ?>/img/mikroelementyi-v-kapsulah-m8xuge3fux6lxzm3128v20eo7sormz60r9gutmgwhc.jpg" data-default="http://operelome.ru/wp-content/uploads/thumbs/mikroelementyi-v-kapsulah-m8xuge3fux6lxzm3128v20eo7sormz60r9gutmgwhc.jpg" style="width: auto; height: 100%; margin-left: -34px; margin-top: 0px;">
-                                  <div class="sp-caption" style="display: none;">Препараты для сращивания костей</div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="sp-slide sp-selected" data-index="2" data-init="true" style="width: 362px; height: 280px; top: 580px;" data-loaded="true">
-                              <div class="sp-image-container" style="width: 362px; height: 280px;">
-                                <a href="http://operelome.ru/preparatyi/669-obezbolivayushhie-tabletki-pri-perelomah" title="Обезболивающие таблетки при переломах">
-                                  <img class="sp-image" src="<?php echo get_template_directory_uri(); ?>/img/mnogo-tabletok-m8xph4bkefrvnc0jukkei8ztk8all5gzfy91rs9z74.jpg" data-default="http://operelome.ru/wp-content/uploads/thumbs/mnogo-tabletok-m8xph4bkefrvnc0jukkei8ztk8all5gzfy91rs9z74.jpg" style="width: auto; height: 100%; margin-left: -34px; margin-top: 0px;">
-                                  <div class="sp-caption" style="display: none;">Обезболивающие таблетки при переломах</div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="sp-slide" data-index="3" data-init="true" style="width: 362px; height: 280px; top: 870px;" data-loaded="true">
-                              <div class="sp-image-container" style="width: 362px; height: 280px;">
-                                <a href="http://operelome.ru/preparatyi/183-obezbolivanie-pri-perelomah" title="Обезболивание при переломах">
-                                  <img class="sp-image" src="<?php echo get_template_directory_uri(); ?>/img/analgetiki-m72yr9qepyqlwayujee9voihk16oh305rcfbmji1dc.jpg" data-default="http://operelome.ru/wp-content/uploads/thumbs/analgetiki-m72yr9qepyqlwayujee9voihk16oh305rcfbmji1dc.jpg" style="width: auto; height: 100%; margin-left: -34px; margin-top: 0px;">
-                                  <div class="sp-caption" style="display: none;">Обезболивание при переломах</div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="sp-thumbnails-container sp-right-thumbnails sp-has-pointer" style="height: 280px;">
-                        <div class="sp-thumbnails sp-grab" style="width: 250px; height: 284px; transform: translate3d(0px, -4px, 0px); transition: transform 0.7s;">
-                          <div class="sp-thumbnail-container" data-loaded="true" style="width: 250px; height: 68px;">
-                            <div class="sp-thumbnail" data-index="0" data-init="true">
-                              <div class="title">Препараты кальция при переломах</div>
-                            </div>
-                          </div>
-                          <div class="sp-thumbnail-container" data-loaded="true" style="width: 250px; height: 68px;">
-                            <div class="sp-thumbnail" data-index="1" data-init="true">
-                              <div class="title">Препараты для сращивания костей</div>
-                            </div>
-                          </div>
-                          <div class="sp-thumbnail-container sp-selected-thumbnail" data-loaded="true" style="width: 250px; height: 68px;">
-                            <div class="sp-thumbnail" data-index="2" data-init="true">
-                              <div class="title">Обезболивающие таблетки при переломах</div>
-                            </div>
-                          </div>
-                          <div class="sp-thumbnail-container" data-loaded="true" style="width: 250px; height: 68px;">
-                            <div class="sp-thumbnail" data-index="3" data-init="true">
-                              <div class="title">Обезболивание при переломах</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="sp-caption-container" style="opacity: 0; transition: opacity 0.5s;">Препараты кальция при переломах</div>
-                    </div>
-                  </div>
-                </div>
+                <?php get_template_part('homeslider'); ?>
               </div>
               <div class="col col-8">
                 <form class="search-form" action="./index_files/index.html">

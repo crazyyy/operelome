@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 1040px) {
   #container-inner {
     width: auto;
@@ -5,17 +6,21 @@
 
   #nav {
     padding: 0;
-
     background: none;
-    ul {
-      width: 100%;
-      height: 37px;
-      margin: 0;
 
-      background: url(images/nav2.png);
+    ul {
+      margin: 0;
+      padding: 9px 0 8px;
+      width: 100%;
+      background: url(../img/nav2.png);
     }
+
     li {
       width: auto;
+
+      a:before, span:before {
+        display: none;
+      }
     }
   }
 
@@ -25,19 +30,16 @@
 
   .row-slider .col {
     float: none;
-
     width: auto;
     margin-left: 0;
   }
 
   a.bordered-button strong {
     margin: 20px;
-
     text-align: center;
   }
 
-  .page-title,
-  .formatted h2 {
+  .page-title, .formatted h2 {
     margin-left: -25px;
   }
 }
@@ -46,13 +48,14 @@
   .row-questions {
     .col {
       float: none;
-
       width: auto;
       margin-left: 0;
+
       + .col {
         margin-top: 10px;
       }
     }
+
     .vk {
       display: none;
     }
@@ -64,14 +67,12 @@
 
   .row-posts .col {
     float: none;
-
     width: auto;
     margin-left: 0;
   }
 
   .footer-right {
     float: none;
-
     width: auto;
   }
 
@@ -85,17 +86,17 @@
 
   .footer-after-logo {
     margin-left: 0;
-
     text-align: center;
   }
 
   .footer-counters {
     text-align: center;
+
     img {
       display: inline-block;
-
       vertical-align: middle;
     }
+
     br {
       display: none;
     }
@@ -115,18 +116,16 @@
 
   #logo {
     float: none;
-
     width: auto;
     padding: 10px 0;
   }
 
   #header-right {
     float: none;
-
     width: auto;
+
     .img:first-child {
       padding-left: 0;
-
       background: none;
     }
   }
@@ -143,10 +142,8 @@
     padding-top: 50px;
   }
 
-  #content,
-  #sidebar {
+  #content, #sidebar {
     float: none;
-
     width: auto;
     margin: 0;
   }
@@ -161,6 +158,7 @@
     .thumb {
       display: none;
     }
+
     .content {
       margin: 0;
     }
@@ -172,22 +170,21 @@
 
   .short {
     float: none;
-
     width: auto;
   }
 
   .short-inner {
-    height: auto;
     margin: 0 0 35px;
+    height: auto;
   }
 
   .row-book {
     .col {
       float: none;
-
       width: auto;
       margin-left: 0;
     }
+
     .img {
       display: none;
     }
@@ -197,9 +194,9 @@
     .title {
       margin-top: 0;
     }
+
     .last-comment {
       padding: 25px;
-
       background-image: none;
     }
   }

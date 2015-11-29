@@ -40,9 +40,8 @@
   </div>
   <!-- wp footer start -->
   <?php wp_footer(); ?>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.sliderPro.min.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.sliderpro.min.js"></script>
+
 </body>
 </html>
