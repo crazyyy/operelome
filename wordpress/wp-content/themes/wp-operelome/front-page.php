@@ -51,7 +51,6 @@
               </div>
               <div class="col col-8 vk">
 
-
               </div>
               <div class="clear"></div>
             </div>
