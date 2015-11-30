@@ -710,4 +710,67 @@ function top_level_cats_remove_cat_base($link) {
   return preg_replace('|' . $category_base . '|', '', $link, 1);
 }
 
+function register_cpt_objects() {
+  $labels = array(
+    'name' => _x( 'Объекты', 'objects' ),
+    'singular_name' => _x( 'Объекты', 'objects' ),
+    'add_new' => _x( 'Добавить', 'objects' ),
+    'add_new_item' => _x( 'Добавить объект', 'objects' ),
+    'edit_item' => _x( 'Редактироваь объект', 'objects' ),
+    'new_item' => _x( 'Новый объект', 'objects' ),
+    'view_item' => _x( 'Посмотреть объект', 'objects' ),
+    'search_items' => _x( 'Искать объект', 'objects' ),
+    'not_found' => _x( 'No objects found', 'objects' ),
+    'not_found_in_trash' => _x( 'No objects found in Trash', 'objects' ),
+    'parent_item_colon' => _x( 'Parent objects:', 'objects' ),
+    'menu_name' => _x( 'Объекты', 'objects' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'menu_position' => 6,
+
+    'show_in_nav_menus' => true,
+    'publicly_queryable' => true,
+    'exclude_from_search' => false,
+    'has_archive' => true,
+    'query_var' => true,
+    'can_export' => true,
+    'rewrite' => true,
+    'capability_type' => 'page'
+  );
+  register_post_type( 'objects', $args );
+}
+function register_cat_objects() {
+  $labels = array(
+    'name'              => _x( 'Город', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Город', 'taxonomy singular name' ),
+    'search_items'      => __( 'Искать город' ),
+    'all_items'         => __( 'Все города' ),
+    'parent_item'       => __( 'Основной город' ),
+    'parent_item_colon' => __( 'Основной город:' ),
+    'edit_item'         => __( 'Редактировать отделение' ),
+    'update_item'       => __( 'Обновить' ),
+    'add_new_item'      => __( 'Добавить новое' ),
+    'new_item_name'     => __( 'Новое отделение' ),
+    'menu_name'         => __( 'Отделения' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'objects-category', 'objects', $args );
+}
+add_action( 'init', 'register_cpt_objects' );
+add_action( 'init', 'register_cat_objects', 0 );
+
+
+
+
+
 ?>
