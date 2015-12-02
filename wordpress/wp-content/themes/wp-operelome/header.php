@@ -54,3 +54,5 @@
         <div id="nav">
           <?php wpeHeadNavTwo(); ?>
         </div>
+        <div id="middle">
+          <div class="centered">

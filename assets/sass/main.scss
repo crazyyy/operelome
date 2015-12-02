@@ -2166,6 +2166,14 @@ a.button,
 .short-inner {
   height: 300px;
   margin: 0 10px;
+  .img {
+    a {
+      img {
+        width: 330px;
+        height: 180px;
+      }
+    }
+  }
 }
 
 .short {
@@ -2245,8 +2253,6 @@ a.button,
       width: 150px ;
       height: 150px ;
       margin: 0;
-
-
       .thumb {
         width: 100%;
         height: 100%;
