@@ -754,11 +754,11 @@ function register_cat_objects() {
     'all_items'         => __( 'Все города' ),
     'parent_item'       => __( 'Основной город' ),
     'parent_item_colon' => __( 'Основной город:' ),
-    'edit_item'         => __( 'Редактировать отделение' ),
+    'edit_item'         => __( 'Редактировать город' ),
     'update_item'       => __( 'Обновить' ),
-    'add_new_item'      => __( 'Добавить новое' ),
-    'new_item_name'     => __( 'Новое отделение' ),
-    'menu_name'         => __( 'Отделения' ),
+    'add_new_item'      => __( 'Добавить город' ),
+    'new_item_name'     => __( 'Новый город' ),
+    'menu_name'         => __( 'Города' ),
   );
   $args = array(
     'labels' => $labels,
@@ -770,6 +770,43 @@ add_action( 'init', 'register_cpt_objects' );
 add_action( 'init', 'register_cat_objects', 0 );
 
 
+function register_cpt_faq() {
+  $labels = array(
+    'name' => _x( 'FAQ', 'faq' ),
+    'singular_name' => _x( 'FAQ', 'faq' ),
+    'add_new' => _x( 'Добавить', 'faq' ),
+    'add_new_item' => _x( 'Добавить faq', 'faq' ),
+    'edit_item' => _x( 'Редактироваь faq', 'faq' ),
+    'new_item' => _x( 'Новый faq', 'faq' ),
+    'view_item' => _x( 'Посмотреть faq', 'faq' ),
+    'search_items' => _x( 'Искать faq', 'faq' ),
+    'not_found' => _x( 'No faq found', 'faq' ),
+    'not_found_in_trash' => _x( 'No faq found in Trash', 'faq' ),
+    'parent_item_colon' => _x( 'Parent faq:', 'faq' ),
+    'menu_name' => _x( 'FAQ', 'faq' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'menu_position' => 7,
+
+    'show_in_nav_menus' => true,
+    'publicly_queryable' => true,
+    'exclude_from_search' => false,
+    'has_archive' => true,
+    'query_var' => true,
+    'can_export' => true,
+    'rewrite' => true,
+    'capability_type' => 'page'
+  );
+  register_post_type( 'faq', $args );
+}
+add_action( 'init', 'register_cpt_faq' );
 
 
 
