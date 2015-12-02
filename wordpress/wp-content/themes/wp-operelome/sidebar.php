@@ -1,87 +1,63 @@
-
-
+<div id="sidebar">
   <?php if ( is_active_sidebar('widgetarea1') ) : ?>
     <?php dynamic_sidebar( 'widgetarea1' ); ?>
   <?php else : ?>
 
-            <div id="sidebar">
+    <div class="sitem">
+      <form class="search-form" method="get" name="searchform" action="<?php bloginfo('url'); ?>/">
+        <div class="search-right">
+          <input class="search-button" type="submit" name="" value="Поиск">
+        </div>
+        <div class="search-left">
+          <input class="search-text" type="text" name="s" value="" placeholder="Введите запрос..." required="required">
+        </div>
+      </form>
+    </div><!-- sitem -->
 
-              <div class="sitem">
+    <div class="sitem">
 
-                <form class="search-form" action="http://operelome.ru/">
-                  <div class="search-right">
-                    <input class="search-button" type="submit" name="" value="Поиск">
-                  </div>
-                  <div class="search-left">
-                    <input class="search-text" type="text" name="s" value="" placeholder="Введите запрос..." required="required">
-                  </div>
-                </form>
-              </div>
+      <a href="<?php echo home_url(); ?>/zadat-vopros-vrachu.htm" class="bordered-button bordered-button-doctor">
+        <span>
+          <strong>Задать вопрос
+            <br> травматологу</strong>
+        </span>
+      </a>
 
-              <div class="sitem">
+      <a href="<?php echo home_url(); ?>/poisk-travmpunkta.htm" class="bordered-button bordered-button-map">
+        <span>
+          <strong>Поиск
+            <br> травмпунктов</strong>
+        </span>
+      </a>
+    </div>
 
-                <a href="http://operelome.ru/zadat-vopros" class="bordered-button bordered-button-doctor">
-                  <span>
-                    <strong>Задать вопрос
-                      <br> травматологу</strong>
-                  </span>
-                </a>
+    <div class="sitem">
 
-                <a href="http://operelome.ru/poisk-travmpunkta" class="bordered-button bordered-button-map">
-                  <span>
-                    <strong>Поиск
-                      <br> травмпунктов</strong>
-                  </span>
-                </a>
-              </div>
+      <div class="stitle">Вопросы врачу-травматологу</div>
+      <div class="block1">
+        <div class="block1-inner block1-inner-small">
 
-              <div class="sitem">
+          <ul class="questions-list-small">
 
-                <div class="stitle">Вопросы врачу-травматологу</div>
-                <div class="block1">
-                  <div class="block1-inner block1-inner-small">
+            <?php query_posts( array( 'post_type' => faq, 'showposts' => 6 ) ); ?>
+              <?php while ( have_posts() ) : the_post(); ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+              <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
 
-                    <ul class="questions-list-small">
-                      <li><a href="http://operelome.ru/vopros/posle-pereloma-lonnoy-kosti-nachalis-silnyie-boli">После перелома лонной кости начались сильные боли?</a></li>
-                      <li><a href="http://operelome.ru/vopros/posle-seansa-magnitoterapii-nachinayutsya-rezkie-boli-v-oblasti-pereloma-klyuchitsyi">После сеанса магнитотерапии начинаются резкие боли в области перелома ключицы</a></li>
-                      <li><a href="http://operelome.ru/vopros/perelom-pozvonka-1-y-stepeni-mozhno-li-vstavat">Перелом позвонка 1-й степени — можно ли вставать?</a></li>
-                      <li><a href="http://operelome.ru/vopros/byil-perelom-pozvonkov-vozmut-li-v-armiyu-pri-takom-diagnoze">Был перелом позвонков — возьмут ли в армию при таком диагнозе?</a></li>
-                      <li><a href="http://operelome.ru/vopros/iz-za-skolioza-noshu-korset-mozhno-li-v-nem-katatsya-na-skeyte">Из-за сколиоза ношу корсет, можно ли в нем кататься на скейте?</a></li>
-                      <li><a href="http://operelome.ru/vopros/nuzhna-li-operatsiya-pri-kompressionnom-i-vzryivnom-perelomah-pozvonkov">Нужна ли операция при компрессионном и взрывном переломах позвонков?</a></li>
-                    </ul>
+          </ul>
 
-                    <div class="text-right" style="margin-top: 10px;">
-                      <a class="btn-filled btn-filled-small" href="http://operelome.ru/vopros" title="">Все вопросы</a>
-                    </div>
+          <div class="text-right" style="margin-top: 10px;">
+            <a class="btn-filled btn-filled-small" href="<?php echo home_url(); ?>/faq" title="">Все вопросы</a>
+          </div>
 
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="spongebob spongebob-sidebar">
 
-
-              <div class="spongebob spongebob-sidebar">
-
-                <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- operelomekvadrat -->
-                <ins class="adsbygoogle" style="display: none !important; width: 300px; height: 250px;" data-ad-client="ca-pub-8497001485260533" data-ad-slot="9363001408"></ins>
-                <script>
-                  (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-
-              </div>
-              <div class="sitem">
-                <div class="stitle">Наши партнеры</div>
-                <div class="block2 block-partners">
-                  <a href="http://www.comnews-conferences.ru/it2015" title="" target="_blank">
-                    <img src="./category_files/98ri83ry934y.gif" alt="">
-                  </a>
-                  <a href="https://www.aptekaexpo.ru/" title="" target="_blank">
-                    <img src="./category_files/9u8ur99r8u.gif" alt="">
-                  </a>
-                </div>
-              </div>
-
-            </div>
+    </div>
 
   <?php endif; ?>
+</div><!-- sidebar -->

@@ -2131,16 +2131,32 @@ a.button,
   }
 }
 
-.thumb-small:after {
-  bottom: -2px;
+.thumb-small {
+  a {
+    display: block;
 
-  width: 60px;
-  height: 6px;
-  margin-left: -30px;
+    width: 150px;
+    height: 150px;
+  }
+  img {
+    display: block;
 
-  background: url(../img/thumb-small.png);
+    width: 150px;
+    height: 150px;
+  }
+  &:after {
+    bottom: -2px;
+
+    width: 60px;
+    height: 6px;
+    margin-left: -30px;
+
+    background: url(../img/thumb-small.png);
+  }
 }
-
+.thumb-related-img {
+  margin: 0 auto !important;
+}
 .thumb img {
   position: relative;
   z-index: 1;
@@ -2148,7 +2164,7 @@ a.button,
   display: block;
 
   width: 100%;
-  height: auto;
+  /* height: auto; */
 
   border-radius: 50%;
 }

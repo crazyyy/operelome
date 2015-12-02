@@ -16,7 +16,7 @@
     <a href="<?php echo home_url(); ?>/zadat-vopros-vrachu.htm" class="bordered-button bordered-button-doctor">
       <span><strong>Задать вопрос<br> травматологу</strong></span>
     </a>
-    <a href="http://operelome.ru/poisk-travmpunkta" class="bordered-button bordered-button-map">
+    <a href="<?php echo home_url(); ?>/poisk-travmpunkta.htm" class="bordered-button bordered-button-map">
       <span><strong>Поиск<br> травмпунктов</strong></span>
     </a>
   </div>

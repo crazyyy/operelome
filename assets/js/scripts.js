@@ -2,167 +2,145 @@
 $(document).ready(init_gallery);
 function init_gallery()
 {
-	var gallery = 1;
-	$('.wp-gallery').each(function() {
-		$(this).find('a').attr('rel', 'gallery-' + gallery++);
-	});
-	$('a[href$=".bmp"], a[href$=".gif"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"]')
-		.fancybox({margin: 100, padding: 2, loop: false, title: ''});
+  var gallery = 1;
+  $('.wp-gallery').each(function() {
+    $(this).find('a').attr('rel', 'gallery-' + gallery++);
+  });
+  $('a[href$=".bmp"], a[href$=".gif"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"]')
+    .fancybox({margin: 100, padding: 2, loop: false, title: ''});
 }
 
 // post navigation
 $(document).ready(init_post_navigation);
 function init_post_navigation()
 {
-	var wrapper = $('.post-navigation');
+  var wrapper = $('.post-navigation');
 
-	wrapper.find('div').append(
-		$('<a>').addClass('toggle').attr('href', '#').html('[спрятать]')
-	);
+  wrapper.find('div').append(
+    $('<a>').addClass('toggle').attr('href', '#').html('[спрятать]')
+  );
 
-	wrapper.find('ul a').on('click', function() {
-		var element = $(this).attr('href');
-		$(element).servsiteScroll();
-		return false;
-	});
+  wrapper.find('ul a').on('click', function() {
+    var element = $(this).attr('href');
+    $(element).servsiteScroll();
+    return false;
+  });
 
-	wrapper.find('.toggle').on('click', function() {
-		if (wrapper.find('ul').is(':visible'))
-		{
-			$(this).html('[показать]');
-			wrapper.find('ul').slideUp();
-		}
-		else
-		{
-			$(this).html('[спрятать]');
-			wrapper.find('ul').slideDown();
-		}
-		return false;
-	});
+  wrapper.find('.toggle').on('click', function() {
+    if (wrapper.find('ul').is(':visible'))
+    {
+      $(this).html('[показать]');
+      wrapper.find('ul').slideUp();
+    }
+    else
+    {
+      $(this).html('[спрятать]');
+      wrapper.find('ul').slideDown();
+    }
+    return false;
+  });
 }
 
 // slidebars
 $(document).ready(init_slidebars);
 function init_slidebars()
 {
-	$.slidebars();
+  $.slidebars();
 }
 
 // sliders
 $(document).ready(init_sliders);
 function init_sliders()
 {
-	// slider
-	if ($.fn.sliderPro)
-	{
-		$("#home-slider").show();
-		$('#home-slider').sliderPro({
-			height: 280,
-			orientation: 'vertical',
-			loop: false,
-			arrows: false,
-			buttons: false,
-			thumbnailsPosition: 'right',
-			thumbnailPointer: true,
-			thumbnailWidth: 250,
-			thumbnailHeight: 68,
-		});
-	}
+  // slider
+  if ($.fn.sliderPro)
+  {
+    $("#home-slider").show();
+    $('#home-slider').sliderPro({
+      height: 280,
+      orientation: 'vertical',
+      loop: false,
+      arrows: false,
+      buttons: false,
+      thumbnailsPosition: 'right',
+      thumbnailPointer: true,
+      thumbnailWidth: 250,
+      thumbnailHeight: 68,
+    });
+  }
 }
 
 // forms
 $(document).ready(init_forms);
 function init_forms()
 {
-	$('.wpcf7-form [aria-required="true"]').each(function() {
-		$(this).closest('.item').find('.label').append(
-			$('<i>').html(' *')
-		);
-	});
+  $('.wpcf7-form [aria-required="true"]').each(function() {
+    $(this).closest('.item').find('.label').append(
+      $('<i>').html(' *')
+    );
+  });
 }
 
 // videos
 $(document).ready(init_videos);
 function init_videos()
 {
-	$('iframe[src*="youtube"]').each(function() {
-		$(this).wrap($('<div>').addClass('video-container'));
-	});
-}
-
-// add link on copy
-$(document).ready(init_add_link_on_copy);
-function init_add_link_on_copy()
-{
-	function addLink() {
-		var body_element = document.getElementsByTagName('body')[0];
-		var selection = window.getSelection();
-		var pagelink = "<br /><br /> Источник: <a href='" + document.location.href + "'>" + document.location.href + "</a>";
-		var copytext = selection + pagelink;
-		var newdiv = document.createElement('div');
-		newdiv.style.position = 'absolute';
-		newdiv.style.left = '-99999px';
-		body_element.appendChild(newdiv);
-		newdiv.innerHTML = copytext;
-		selection.selectAllChildren(newdiv);
-		window.setTimeout(function() {
-			body_element.removeChild(newdiv);
-		},0);
-	}
-	document.oncopy = addLink;
+  $('iframe[src*="youtube"]').each(function() {
+    $(this).wrap($('<div>').addClass('video-container'));
+  });
 }
 
 // print
 $(document).ready(init_print);
 function init_print()
 {
-	$('.link-print').on('click', function() {
-		window.print();
-		return false;
-	});
+  $('.link-print').on('click', function() {
+    window.print();
+    return false;
+  });
 }
 
 // fav
 $(document).ready(init_fav);
 function init_fav()
 {
-	$('.link-fav').on('click', function() {
-		fav(this);
-		function fav(a){title=document.title;url=document.location;try{window.external.AddFavorite(url,title);}catch(e){try{window.sidebar.addPanel(title,url,"");}catch(e){if(typeof(opera)=="object"){a.rel="sidebar";a.title=title;a.url=url;return true;}else{alert('Нажмите Ctrl-D, чтобы добавить страницу в закладки');}}}return false;}
-		return false;
-	});
+  $('.link-fav').on('click', function() {
+    fav(this);
+    function fav(a){title=document.title;url=document.location;try{window.external.AddFavorite(url,title);}catch(e){try{window.sidebar.addPanel(title,url,"");}catch(e){if(typeof(opera)=="object"){a.rel="sidebar";a.title=title;a.url=url;return true;}else{alert('Нажмите Ctrl-D, чтобы добавить страницу в закладки');}}}return false;}
+    return false;
+  });
 }
 
 // up
 $(init_up);
 function init_up()
 {
-	var up = $('<a id="up" title="Наверх">↑</a>').appendTo($('body'));
-	up.on('click', function() {
-		$('html, body').animate({scrollTop: 0}, 'slow');
-		return false;
-	});
-	$(window).on('scroll', function(){
-		if ($(this).scrollTop() > 300)
-			up.fadeIn();
-		else
-			up.fadeOut();
-	});
-	$(window).trigger('scroll');
+  var up = $('<a id="up" title="Наверх">↑</a>').appendTo($('body'));
+  up.on('click', function() {
+    $('html, body').animate({scrollTop: 0}, 'slow');
+    return false;
+  });
+  $(window).on('scroll', function(){
+    if ($(this).scrollTop() > 300)
+      up.fadeIn();
+    else
+      up.fadeOut();
+  });
+  $(window).trigger('scroll');
 }
 
 
 /* servsiteScroll */
 //jQuery.noConflict();
 (function($) {
-	$.fn.servsiteScroll = function(options) {
-		var options = $.extend({speed: 1000, index: 0, offset: 0}, options);
-		this.eq(options.index).each(function() {
-			var destination = $(this).offset().top - 10 - options.offset;
-			$('html, body').animate({scrollTop: destination}, options.speed);
-		});
-		return this;
-	};
+  $.fn.servsiteScroll = function(options) {
+    var options = $.extend({speed: 1000, index: 0, offset: 0}, options);
+    this.eq(options.index).each(function() {
+      var destination = $(this).offset().top - 10 - options.offset;
+      $('html, body').animate({scrollTop: destination}, options.speed);
+    });
+    return this;
+  };
 })(jQuery);
 
 // Slidebars 0.10.3 (http://plugins.adchsm.me/slidebars/) written by Adam Smith (http://www.adchsm.me/) released under MIT License (http://plugins.adchsm.me/slidebars/license.txt)

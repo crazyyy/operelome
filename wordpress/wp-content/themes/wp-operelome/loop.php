@@ -16,8 +16,6 @@
   </div>
   <?php endwhile; else: ?>
   <div>
-
     <h2 class="title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
-
   </div><!-- /article -->
 <?php endif; ?>
