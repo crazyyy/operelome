@@ -8,6 +8,7 @@
 @import 'old/slider-pro';
 @import 'old/style-comments';
 @import 'old/style2';
+@import 'import/forms';
 /* reset */
 
 html,
@@ -1499,6 +1500,7 @@ a.btn-rounded:hover {
   border-color: #ff7018;
 }
 
+input[type=submit],
 .btn-filled,
 a.btn-filled {
   display: inline-block;
@@ -1520,6 +1522,7 @@ a.btn-filled {
   margin-left: 5px;
 }
 
+input[type=submit]:hover,
 a.btn-filled:hover {
   background: #ff7018;
 }
@@ -2129,21 +2132,35 @@ a.button,
 
     background: url(../img/thumb.png);
   }
+  img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 112px;
+    height: 112px;
+    /*     width: 100%;
+height: auto; */
+    margin: 0 auto;
+
+    border-radius: 50%;
+  }
 }
 
 .thumb-small {
-  a {
-    display: block;
+  /*   a {
+  display: block;
 
-    width: 150px;
-    height: 150px;
-  }
-  img {
-    display: block;
+  width: 150px;
+  height: 150px;
+}
+img {
+  display: block;
 
-    width: 150px;
-    height: 150px;
-  }
+  width: 150px;
+  height: 150px;
+} */
   &:after {
     bottom: -2px;
 
@@ -2156,18 +2173,12 @@ a.button,
 }
 .thumb-related-img {
   margin: 0 auto !important;
+  img {
+    /*     width: 150px;
+height: 150px; */
+  }
 }
-.thumb img {
-  position: relative;
-  z-index: 1;
 
-  display: block;
-
-  width: 100%;
-  /* height: auto; */
-
-  border-radius: 50%;
-}
 
 .short-wrapper {
   margin: 0 -10px;
@@ -2178,10 +2189,14 @@ a.button,
 
   width: 50%;
 }
+.search-result-title {
+  @extend .page-title;
+}
 .single-travmpunkt {
   div {
-    margin: 0 0 10px;
     font-size: 120%;
+
+    margin: 0 0 10px;
   }
 }
 .short-inner {
@@ -2196,7 +2211,34 @@ a.button,
     }
   }
 }
+.pagination {
+  text-align: center;
 
+  @extend .clearfix;
+  a,
+  span {
+    display: inline-block;
+
+    padding: 5px;
+
+    color: #666;
+    background-color: #eee;
+  }
+  a {
+    text-decoration: none;
+
+    color: #000;
+    &:hover {
+      text-decoration: underline;
+    }
+    &.next {
+      float: right;
+    }
+    &.prev {
+      float: left;
+    }
+  }
+}
 .short {
   .img {
     position: relative;
@@ -2271,23 +2313,23 @@ a.button,
   overflow: hidden;
   .short-horiz {
     .img {
-      width: 150px ;
-      height: 150px ;
-      margin: 0;
-      .thumb {
-        width: 100%;
-        height: 100%;
-      }
-      a {
-        position: absolute;
+      /*       width: 150px ;
+height: 150px ;
+margin: 0; */
+      /*       .thumb {
+  width: 100%;
+  height: 100%;
+} */
+      /*       a {
+  position: absolute;
 
-        width: 100%;
-        height: 100%;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+} */
     }
   }
 }

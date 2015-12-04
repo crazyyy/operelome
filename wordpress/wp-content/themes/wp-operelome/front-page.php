@@ -97,36 +97,37 @@
     $catLink = get_category_link( $secondCat );
   ?>
 
-  <div class="col col-12 last last-block">
+  <div class="col col-12 last">
     <div class="block-title">
       <?php echo $catTitle ?>
       <a class="more" href="<?php echo $catLink ?>" title="<?php echo $catTitle ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-link.png" alt=""></a>
-    </div><!-- block-title -->
+    </div>
+    <div class="short-video-wrapper">
 
-    <div class="short-horiz-wrapper">
-
-      <?php query_posts("showposts=3&cat=' . $secondCat . '"); ?>
+      <?php query_posts("showposts=2&cat=' . $secondCat . '"); ?>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <div class="short-horiz" id="short-horiz-<?php the_ID(); ?>">
-        <div class="img">
-          <div class="thumb thumb-small">
-            <a href="<?php the_permalink(); ?>" title="Вдавленный перелом черепа">
-              <?php if ( has_post_thumbnail()) :
-                the_post_thumbnail('large');
-              else: ?>
-                <img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
-              <?php endif; ?>
-            </a>
-          </div>
-        </div>
-        <div class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
-      </div><!-- short-horiz -->
+        <div class="short-video" id="short-horiz-<?php the_ID(); ?>">
+          <div class="short-video-inner">
+
+            <div class="img">
+              <a href="<?php the_permalink(); ?>" title="Вдавленный перелом черепа">
+                <?php if ( has_post_thumbnail()) :
+                  the_post_thumbnail('large');
+                else: ?>
+                  <img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+                <?php endif; ?>
+              </a>
+            </div>
+
+            <div class="title">
+              <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+            </div>
+
+          </div><!-- short-video-inner -->
+        </div><!-- short-video -->
       <?php endwhile; endif; ?>
-      <?php wp_reset_query(); ?>
-
-    </div><!-- short-horiz-wrapper -->
-  </div><!-- last-block -->
-
+    </div><!-- short-video-wrapper -->
+  </div>
 
   <div class="clear"></div>
 </div>

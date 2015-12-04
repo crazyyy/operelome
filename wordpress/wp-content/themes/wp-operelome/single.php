@@ -26,7 +26,21 @@
           <div class="clear"></div>
         </div>
 
+        <div class="info">
+          <div class="info-left">
+            <i class="icon icon-print"></i> <a class="link-print" href="#">Распечатать статью</a>
+            <i class="icon icon-star"></i> <a class="link-fav" href="#">В закладки</a>
+          </div>
+          <div class="info-right">
+            <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+            <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter=""></div>
+          </div>
+        </div>
+
       </div><!-- block-author -->
+
+      <?php comments_template(); ?>
 
       <?php get_template_part('include-related'); ?>
 
